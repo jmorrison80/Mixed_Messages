@@ -29,14 +29,46 @@ console.log(showerThought[randShowerThought]);
 */
 
 // Opening statement
-console.log("Welcome to the random message generator!")
+console.log(" ");
+console.log("******************************************");
+console.log("*Welcome to the random message generator!*");
+console.log("******************************************");
+console.log("Please make the following selection, depending on what type of message you want.");
+console.log(" ");
+console.log('For a "Shower Thought", please select 1');
+console.log('For a "Quick Joke", please select 2');
+console.log('For a "Journal Topic", please select 3');
+console.log(" ");
 
 // Prompt for selection
-const prompt = require("prompt-sync")();
+const prompt = require("prompt-sync")({sigint: true});
 
-const selection = prompt("What is your selection?");
-    if (typeOfQuote === 1) {
-        const random = Math.floor(Math.random() + showerThought.length -1);
-        console.log(showerThought[random]);
-    }
+// Funciton of selection process.
+function selectionProcess() {
+    let selection = prompt("What is your selection? ");
+    selection = Number(selection)   
+        if (selection === 1) {
+            console.log(" ");
+            console.log("You have selected: Shower Thoughts")
+            console.log("Here is your random thought")
+            const random = Math.floor(Math.random() * showerThought.length -1);
+            return console.log(showerThought[random]);
+        } else if (selection === 2) {
+            console.log(" ");
+            console.log("You have selected: Quick Joke")
+            console.log("Here is your random joke") 
+            const random = Math.floor(Math.random() * funnyJoke.length - 1);
+            return console.log(funnyJoke[random]);
+        } else if (selection === 3) {
+            console.log(" ");
+            console.log("You have selected: Journal Topic")
+            console.log("Here is your random topic")   
+            const random = Math.floor(Math.random() * journalTopic.length - 1);
+            return console.log(journalTopic[random]);
+        } else {
+            console.log('You did not make a proper selection, please try again')
+            return selectionProcess();
+        }
+}
+selectionProcess();
 //console.log(typeOfQuote)
