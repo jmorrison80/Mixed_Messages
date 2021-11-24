@@ -1,3 +1,4 @@
+//all the different quotes in arrays
 const showerThought = ['Randomly hearing your favorite song on the radio is more satisfying than playing it directly from your ipod.', 
 '\"Go to bed, you\'ll feel better in the morning\" is the human version of \"Did you turn it off and turn it back on again?\"',
 'Maybe plants are really farming us, giving us oxygen until we eventually expire and turn into mulch which they can consume',
@@ -22,5 +23,20 @@ const journalTopic = ['What is the most beautiful thing you’ve ever seen?', 'W
 'What does it mean to be a good friend?  What type of friend are you?',
 'What is your greatest fear?  Do you think it is realistic or not?  Why?'];
 
+/*
 let randShowerThought = Math.floor(Math.random() * showerThought.length);
 console.log(showerThought[randShowerThought]);
+*/
+
+// Opening statement
+console.log("Welcome to the random message generator!")
+
+// Prompt for selection
+const prompt = require("prompt-sync")();
+
+const selection = prompt("What is your selection?");
+    if (typeOfQuote === 1) {
+        const random = Math.floor(Math.random() + showerThought.length -1);
+        console.log(showerThought[random]);
+    }
+//console.log(typeOfQuote)
