@@ -31,7 +31,7 @@ console.log(showerThought[randShowerThought]);
 // Opening statement
 console.log(" ");
 console.log("******************************************");
-console.log("*Welcome to the random message generator!*");
+console.log("Welcome to the random message generator!");
 console.log("******************************************");
 console.log("Please make the following selection, depending on what type of message you want.");
 console.log(" ");
@@ -45,8 +45,10 @@ const prompt = require("prompt-sync")({sigint: true});
 
 // Funciton of selection process.
 function selectionProcess() {
+    //asks for selection
     let selection = prompt("What is your selection? ");
-    selection = Number(selection)   
+    selection = Number(selection)
+        // selection if statement   
         if (selection === 1) {
             console.log(" ");
             console.log("You have selected: Shower Thoughts")
