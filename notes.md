@@ -1,12 +1,13 @@
-# Come Up With Topic
+# Project Notes
+
+## Come Up With Topic
 
 * Create random messages from a list of possible categories
 * Shower thoughts
 * funny joke
 * journal topic
 
-Project Plan
-============
+## Project Plan
 
 1. User opens file
 2. script asks user if they would like a random message
@@ -15,13 +16,16 @@ Project Plan
     * User the asked if they want another one
 5. If no, script says goodbye
 
-# Set up version control
+## Set up version control
+
 * Version control set up
 
-# Store Message components
+## Store Message components
+
 ### Create the following arrays
-```
+
+```javascript
 const showerThoughts[]
 const funnyJoke[]
-const journalTopic[]
+const journalTopic[b ]
 ```
